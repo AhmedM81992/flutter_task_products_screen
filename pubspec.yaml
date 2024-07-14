@@ -1,0 +1,50 @@
+name: flutter_task
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+  dio: ^5.5.0+1
+  freezed: ^2.5.2
+  freezed_annotation: ^2.4.3
+  dartz: ^0.10.1
+  flutter_screenutil: ^5.9.3
+  cached_network_image: ^3.3.1
+  injectable: ^2.4.2
+  get_it: ^7.7.0
+  flutter_svg: ^2.0.10+1
+
+
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.11
+  flutter_lints: ^3.0.0
+  injectable_generator: ^2.6.1
+
+
+flutter:
+
+
+  uses-material-design: true
+
+
+  assets:
+    - assets/images/
+
