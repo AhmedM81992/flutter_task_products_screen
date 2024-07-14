@@ -26,51 +26,49 @@ class CustomAppBar extends StatelessWidget {
             AppImages.logo,
           ),
           SizedBox(height: 19.h),
-          Container(
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 350.w,
-                  height: 50.h,
-                  child: TextFormField(
-                    controller: _searchController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(24.r),
-                        borderSide:
-                            BorderSide(width: 1.w, color: AppColors.blueColor),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(24.r),
-                        borderSide:
-                            BorderSide(width: 1.w, color: AppColors.blueColor),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(24.r),
-                        borderSide:
-                            BorderSide(width: 1.w, color: AppColors.blueColor),
-                      ),
-                      prefixIcon: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: SvgPicture.asset(AppImages.search),
-                      ),
-                      hintStyle: Styles.hintStyle,
-                      enabled: true,
-                      hintText: AppStrings.searchHint,
+          Row(
+            children: [
+              SizedBox(
+                width: 350.w,
+                height: 50.h,
+                child: TextFormField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(24.r),
+                      borderSide:
+                          BorderSide(width: 1.w, color: AppColors.blueColor),
                     ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(24.r),
+                      borderSide:
+                          BorderSide(width: 1.w, color: AppColors.blueColor),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(24.r),
+                      borderSide:
+                          BorderSide(width: 1.w, color: AppColors.blueColor),
+                    ),
+                    prefixIcon: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: SvgPicture.asset(AppImages.search),
+                    ),
+                    hintStyle: Styles.hintStyle,
+                    enabled: true,
+                    hintText: AppStrings.searchHint,
                   ),
                 ),
-                SizedBox(width: 20.w),
-                InkWell(
-                  onTap: () {},
-                  child: SvgPicture.asset(
-                    AppImages.cart,
-                    width: 25.w,
-                    height: 25.h,
-                  ),
+              ),
+              SizedBox(width: 20.w),
+              InkWell(
+                onTap: () {},
+                child: SvgPicture.asset(
+                  AppImages.cart,
+                  width: 25.w,
+                  height: 25.h,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
