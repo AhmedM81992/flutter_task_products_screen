@@ -5,10 +5,9 @@ import 'package:flutter_task/feature/products_screen/domain/repository/products_
 import 'package:injectable/injectable.dart';
 
 @injectable
-class GetProductsUsecase {
+class GetProductsUseCase {
   ProductsRepo productsRepo;
-
-  GetProductsUsecase(this.productsRepo);
+  GetProductsUseCase(this.productsRepo);
 
   Future<Either<Failures, ProductsModel>> call() => productsRepo.getProducts();
 }

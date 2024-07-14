@@ -13,7 +13,7 @@ class ProductsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<ProductsBloc>()..add(GetProductsEvent()),
+      create: (context) => getIt<ProductsBloc>()..add(const GetProductsEvent()),
       child: BlocConsumer<ProductsBloc, ProductsState>(
         listener: (context, state) {},
         builder: (context, state) {

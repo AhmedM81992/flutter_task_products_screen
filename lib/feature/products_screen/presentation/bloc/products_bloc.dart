@@ -5,7 +5,7 @@ import 'package:flutter_task/feature/products_screen/data/model/products_model.d
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../domain/usecase/get_products_usecase.dart';
+import '../../domain/use_case/get_products_use_case.dart';
 
 part 'products_event.dart';
 part 'products_state.dart';
@@ -13,13 +13,13 @@ part 'products_bloc.freezed.dart';
 
 @injectable
 class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
-  GetProductsUsecase getProductsUsecase;
+  GetProductsUseCase getProductsUseCase;
 
-  ProductsBloc(this.getProductsUsecase) : super(const ProductsState()) {
+  ProductsBloc(this.getProductsUseCase) : super(const ProductsState()) {
     on<GetProductsEvent>((event, emit) async {
       emit(state.copyWith(getProductsStatus: RequestStatus.loading));
 
-      var result = await getProductsUsecase();
+      var result = await getProductsUseCase();
       result.fold((l) {
         emit(state.copyWith(
             productsFailures: l, getProductsStatus: RequestStatus.failures));

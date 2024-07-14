@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_task/core/api/api_manager/api_manager.dart';
 import 'package:flutter_task/feature/products_screen/data/model/products_model.dart';
 import 'package:injectable/injectable.dart';
@@ -14,9 +15,7 @@ class ProductsDsImpl implements ProductsDs {
   @override
   Future<ProductsModel> getProducts() async {
     var response = await apiManager.getData(EndPoint.productsEndpoint);
-
-    ProductsModel productsModel = ProductsModel.fromJson(response);
-    print("${productsModel.products?[0].images?.first}");
+    ProductsModel productsModel = ProductsModel.fromJson(response.data);
     return productsModel;
   }
 }

@@ -16,7 +16,7 @@ import 'feature/products_screen/data/data_sources/products_ds.dart' as _i4;
 import 'feature/products_screen/data/data_sources/products_ds_impl.dart' as _i5;
 import 'feature/products_screen/data/repository/products_repo_impl.dart' as _i7;
 import 'feature/products_screen/domain/repository/products_repo.dart' as _i6;
-import 'feature/products_screen/domain/usecase/get_products_usecase.dart'
+import 'feature/products_screen/domain/use_case/get_products_use_case.dart'
     as _i8;
 import 'feature/products_screen/presentation/bloc/products_bloc.dart' as _i9;
 
@@ -35,10 +35,10 @@ extension GetItInjectableX on _i1.GetIt {
     gh.factory<_i4.ProductsDs>(() => _i5.ProductsDsImpl(gh<_i3.ApiManager>()));
     gh.factory<_i6.ProductsRepo>(
         () => _i7.ProductsRepoImpl(gh<_i4.ProductsDs>()));
-    gh.factory<_i8.GetProductsUsecase>(
-        () => _i8.GetProductsUsecase(gh<_i6.ProductsRepo>()));
+    gh.factory<_i8.GetProductsUseCase>(
+        () => _i8.GetProductsUseCase(gh<_i6.ProductsRepo>()));
     gh.factory<_i9.ProductsBloc>(
-        () => _i9.ProductsBloc(gh<_i8.GetProductsUsecase>()));
+        () => _i9.ProductsBloc(gh<_i8.GetProductsUseCase>()));
     return this;
   }
 }
